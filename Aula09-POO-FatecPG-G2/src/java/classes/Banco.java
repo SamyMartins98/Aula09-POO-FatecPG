@@ -43,7 +43,7 @@ public class Banco {
             teste.setEmail("tio@ortifruti.com");
             teste.setTelefone(123456789);
             teste.setCnpj("123456");
-            teste.setRazaoSoscial("Tio do Ortifrut");
+            teste.setRazaoSocial("Tio do Ortifrut");
             fornecedor.add(teste);
         }
         return fornecedor;

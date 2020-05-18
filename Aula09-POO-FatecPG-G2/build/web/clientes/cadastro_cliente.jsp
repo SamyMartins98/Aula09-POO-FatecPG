@@ -54,10 +54,10 @@
         <title>Cadastro Cliente</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mask.min.js"></script>	
+        <link href="../components/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../components/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../components/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../components/js/jquery.mask.min.js"></script>	
 	<script type="text/javascript">
             $(document).ready(function(){
 			$("#cpf").mask("000.000.000-00");

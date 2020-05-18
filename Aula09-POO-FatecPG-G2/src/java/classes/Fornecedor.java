@@ -29,12 +29,12 @@ public class Fornecedor {
         this.email = email;
     }
 
-    public String getRazaoSoscial() {
+    public String getRazaoSocial() {
         return razaoSocial;
     }
 
-    public void setRazaoSoscial(String razaoSoscial) {
-        this.razaoSocial = razaoSoscial;
+    public void setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
     }
 
     public String getCnpj() {
