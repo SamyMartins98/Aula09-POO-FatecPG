@@ -33,8 +33,8 @@ public class Fornecedor {
         return razaoSocial;
     }
 
-    public void setRazaoSocial(String razaoSocial) {
-        this.razaoSocial = razaoSocial;
+    public void setRazaoSocial(String razaoSoscial) {
+        this.razaoSocial = razaoSoscial;
     }
 
     public String getCnpj() {

@@ -14,7 +14,7 @@
     int i = -1;
     if(request.getParameter("i") != null){
         i = Integer.parseInt(request.getParameter("i"));
-        forn = Banco.getFornecedor().get(i);
+        forn = Banco.getForn().get(i);
         if(forn == null){
             error = "Índice inválido!";
         }
@@ -45,7 +45,7 @@
                         editUser.setCnpj(cnpj);
                         editUser.setTelefone(telefone);
                         editUser.setEndereco(endereco);
-                        Banco.getFornecedor().set(i, editUser);
+                        Banco.getForn().set(i, editUser);
                         response.sendRedirect("cadastros.jsp");
                    
             } 

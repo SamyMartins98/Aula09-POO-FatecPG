@@ -1,11 +1,11 @@
 <%-- 
-    Document   : cadastro_fornecedor
-    Created on : 17/05/2020, 14:06:41
+    Document   : cadastro_cliente
+    Created on : 17/05/2020, 12:32:42
     Author     : angelo
 --%>
 
 <%@page import="classes.Banco"%>
-<%@page import="classes.Fornecedor"%>
+<%@page import="classes.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
@@ -16,8 +16,8 @@
         String email = request.getParameter("email");
         String endereco = request.getParameter("endereco");
         int telefone = Integer.parseInt( request.getParameter("telefone"));/*int telefone = integer.toString(telefone);*/ 
-        String cnpj = request.getParameter("cnpj");
-        String razaoSocial = request.getParameter("razaosocial");
+        String cpf = request.getParameter("cpf");
+        String rg = request.getParameter("rg");
         if(name.isEmpty())
         {
             error = "Nome Inválido";
@@ -26,32 +26,32 @@
         {
             error = "E-mail Inválido";
         }
-        else if(cnpj.isEmpty())
+        else if(cpf.isEmpty())
         {
             error = "CPF Inválido";
         }
-         else if(razaoSocial.isEmpty())
+         else if(cpf.isEmpty())
         {
             error = "RG Inválido";
         }
         else
          {
-             Fornecedor forn = new Fornecedor();
-             forn.setNome(name);
-             forn.setEmail(email);
-             forn.setRazaoSoscial(razaoSocial);
-             forn.setCnpj(cnpj);
-             forn.setTelefone(telefone);
-             forn.setEndereco(endereco);
-             Banco.getForn();
-             response.sendRedirect("cadastros_fornecedores.jsp");
+             Cliente cli = new Cliente();
+             cli.setNome(name);
+             cli.setEmail(email);
+             cli.setCpf(cpf);
+             cli.setRg(rg);
+             cli.setTelefone(telefone);
+             cli.setEndereco(endereco);
+             Banco.getCli().add(cli); 
+             response.sendRedirect("cadastros_clientes.jsp");
                 
         } 
     }
 %>
 <html>
     <head>
-        <title>Cadastro Fornecedor</title>
+        <title>Cadastro Cliente</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -111,24 +111,24 @@
                 error : function(erro){
                     console.log(erro);
                 }
-                });
-               });
+            });
+    });
             });
         </script>
     </head>
     <body>
-        <h1>Novo Fornecedor</h1>
+        <h1>Novo Cliente</h1>
         
         <div>
             <form name="formulario" method="post">
                 <label>Nome:</label>
 		<input type="text" name="nome" id="nome" placeholder="digite seu Nome"/>
 		<br />
-		<label>Razão Social:</label>
-		<input type="text" name="razaosocial" id="razaosocial" />
+		<label>CPF:</label>
+		<input type="text" name="cpf" id="cpf" placeholder="digite seu CPF" />
 		<br />
-		<label>CNPJ:</label>
-                <input type="text" name="cnpj" id="cnpj" placeholder="digite seu CNPJ" />
+		<label>RG:</label>
+                <input type="text" name="rg" id="rg" placeholder="digite seu RG" />
 		<br />
                 <label>E-mail:</label>
                 <input type="email" name="email" id="email" placeholder="digite seu E-mail" />

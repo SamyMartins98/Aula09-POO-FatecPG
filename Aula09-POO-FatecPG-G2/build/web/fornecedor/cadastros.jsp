@@ -26,7 +26,7 @@
                 <th>Comandos</th>
             <tr>
                 
-            <%for (Fornecedor forn: Banco.getFornecedor()) {%>
+            <%for (Fornecedor forn: Banco.getForn()) {%>
             </tr>
             <td><%= forn.getNome()%></td>
             <td><%= forn.getEmail()%></td>

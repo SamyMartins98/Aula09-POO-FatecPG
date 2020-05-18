@@ -31,22 +31,22 @@ public class Banco {
         return cli;
     }
     
-    private static ArrayList<Fornecedor> fornecedor;
+    private static ArrayList<Fornecedor> forn;
     
-        public static ArrayList<Fornecedor> getFornecedor()
+        public static ArrayList<Fornecedor> getForn()
     {
-        if(fornecedor == null)
+        if(forn == null)
         {
-            fornecedor = new ArrayList<>();
+            forn = new ArrayList<>();
             Fornecedor teste = new Fornecedor();
             teste.setNome("Fornecedor");
             teste.setEmail("tio@ortifruti.com");
             teste.setTelefone(123456789);
             teste.setCnpj("123456");
             teste.setRazaoSocial("Tio do Ortifrut");
-            fornecedor.add(teste);
+            forn.add(teste);
         }
-        return fornecedor;
+        return forn;
     }
     
 }
